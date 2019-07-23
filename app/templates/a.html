@@ -12,9 +12,64 @@
 
 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
+		
+		<style type="text/css">
+			.box {
+				display: flex;
+				flex-direction: column;
+				background-color: purple;
+				border: 2px solid black;
+				width: -webkit-fill-available;
+				height: -webkit-fill-available;
+/* 				padding: 50% 0; */
+			  }
+			
+			.temp {
+				flex: 1 2 auto;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				visibility: hidden;
+			}
+			.across {
+				flex: 2 1 auto;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			.lBox {
+				margin: 1%;
+				color: white;
+				background-color: orange;
+				border: 2px solid black;
+				font-size: 60px;
+				width: 18%;
+			  }
+		</style>
 	</head>
 	<body>
 		<!-- Your layout here -->
-
+		<div class='box'>
+			<div class='temp'>
+				<div class='lBox'>0</div>
+			</div>
+        	<div class='across'>
+				<div class='lBox'>1</div>
+				<div class='lBox'>2</div>
+				<div class='lBox'>3</div>
+				<div class='lBox'>4</div>
+				<div class='lBox'>5</div>
+			</div>
+        	<div class='across'>
+				<div class='lBox'>1</div>
+				<div class='lBox'>2</div>
+				<div class='lBox'>3</div>
+			</div>
+			<div class='temp'>
+				<div class='lBox'>0</div>
+			</div>
+      	</div>
+    
 	</body>
 </html>
